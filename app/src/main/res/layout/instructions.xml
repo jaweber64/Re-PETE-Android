@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorGreen">
+
+        <LinearLayout
+            android:id="@+id/instr_appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/Re"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:text="Re-"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/PETE"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_toRightOf="@+id/Re"
+                android:text="PETE"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold|italic"/>
+
+        </LinearLayout>
+        <!--<TextView-->
+            <!--android:id="@+id/instr_appName"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_above="@+id/instr_icon"-->
+            <!--android:layout_alignParentTop="false"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:text="Re-PETE"-->
+            <!--android:textColor="@color/colorPrimaryDark"-->
+            <!--android:textSize="24sp"-->
+            <!--android:textStyle="bold"/>-->
+
+        <ImageView
+            android:id="@+id/instr_icon"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/repeat_logo_01"/>
+
+        <TextView
+            android:id="@+id/instrLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:text="INFORMATION"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@drawable/re_pete180">
+
+        <WebView
+            android:id="@+id/instr_wv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha=".90"/>
+
+    </FrameLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="start"
+        android:background="@color/colorPrimaryDark"
+        android:measureAllChildren="false"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:menu="@menu/navigation"/>
+</LinearLayout>
